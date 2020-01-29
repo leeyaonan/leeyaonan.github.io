@@ -1,88 +1,98 @@
-![](/jekylltheme.jpg)
+# Minimalism
 
-# Jekyll Theme MDUI
+[![Build Status](https://travis-ci.org/showzeng/Minimalism.svg?branch=master)](https://travis-ci.org/showzeng/Minimalism)
+[![Jekyll Version](https://img.shields.io/badge/Jekyll-3.8-blue.svg)](https://jekyllrb.com/)
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimalism.svg)](https://badge.fury.io/rb/jekyll-theme-minimalism)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=popout)](./LICENSE.txt)
 
-> A Jekyll theme based on mdui
+![screenshot](./docs/screenshot.png)
 
-> 主题停更，只做兼容性维护。期待 V2 吧！
+Minimalism 是一款基于 Jekyll 为极简主义者打造的极简主题。你可以访问 [我的博客][blog] 或者 [主题 demo][demo] 来预览一下。
 
-## Contents
+## 特性
 
-* [General](#general)
-* [Demo](#demo)
-* [Quick start](#quick-start)
-* [Docs](#docs)
-* [TODO](#todo)
-* [Note](#note)
-* [Contributing](#contributing)
-* [Development](#development)
-* [License](#license)
+**V0.1.x**
+- 这款主题采用响应式布局，对各大主流浏览器做了兼容，对移动客户端做了适配
+- 支持 RSS 订阅
+- SEO 优化
+- 文章默认采用 [CC BY-NC-ND 4.0][license] 协议对著作权进行保护，支持 emoji 表情
+- 支持禁止复制、禁止右键菜单、复制附带版权声明等多种功能
+- 支持文章图片查看大图
+- 支持文章打赏 (微信、支付宝)
+- 支持评论功能 (目前支持来必力、gitment)
+- 支持站点统计 (目前支持谷歌统计、百度统计、友盟 cnzz 统计)
+- 最后且最重要的当然还是对博客文章极度的阅读体验优化
 
-## General
+## 安装
 
-[![Version](https://img.shields.io/badge/version-0.5.3-green.svg?style=flat-square)]()
-[![Jekyll](https://img.shields.io/badge/Jekyll-3.5+-green.svg?style=flat-square)](https://jekyllrb.com/)
-[![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
+在你的 `Gemfile` 文件中加入下面这一行:
 
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/KeJunMao/jekyll-theme-mdui.svg?style=flat-square&label=code%20climate)](https://codeclimate.com/github/KeJunMao/jekyll-theme-mdui/)
-[![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+```ruby
+gem "jekyll-theme-minimalism"
+```
 
-[![Author](https://img.shields.io/badge/author-KeJun-blue.svg?style=flat-square)](https://blog.kejun.me)
+然后使用 bundle 执行安装:
 
-## Demo
+    $ bundle install
 
-[KeJun's Blog](https://blog.kejun.me)
+或者你也可以手动下载安装:
 
-## Quick start
+    $ gem install jekyll-theme-minimalism
 
-[Quick start](http://mdui.kejun.me/#/quickstart)
+在你的配置文件 `_config.yml` 中修改启用主题 (本地预览):
 
-[快速开始](http://mdui.kejun.me/#/zh-cn/quickstart)
+```yaml
+theme: jekyll-theme-minimalism
+```
 
-## Docs
+使用 GitHub pages 发布时，在你的配置文件 `_config.yml` 中修改启用远程主题:
 
-[Docs](http://mdui.kejun.me/#/)(!!!Need Help!!!)
+```yaml
+# theme: jekyll-theme-minimalism
+remote_theme: showzeng/Minimalism
+```
 
-[中文文档](http://mdui.kejun.me/#/zh-cn/)
+## 使用
 
-## TODO
+移步 [wiki] 或者查看 [demo]。
 
-- [ ] V2
+## 支持
 
-## Note
+如果你觉得这个主题还不错，欢迎 star 或使用。你也可以自由的 fork，基于本主题打造你自己的主题，当然，希望最好是能署名或提及本博客主题。
 
-File Required or Optional:
+此外你有什么好的建议、需求或者是碰到什么问题，欢迎提交 [issue]，本主题还会不断完善。
 
-|files|Required or Optional|Description|
-|---  |---                 |---        |
-|mainifest.json|Optional   |Is the only file that every WebExtension must contain.See [here](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json).|
-|sw.js|Optional            |Service Workers.See [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers).|
-|search.json|Optional|If you use the search page, it is required.|
-|tags.json|Optional|If you use the tags page, it is required.|
-|_data/friends.yml|Optional|If you use the friends page, it is required.|
-|_data/sns.yml|Optional|It is footer sns,if you want used, it is required.|
-|_data/meng.yml|Optional|It is Meng option,if you want used, it is required.|
-|_data/site.yml|Required|It is theme config.|
-|_data/lang.yml|Required|It is language config.|
-|_data/menus.yml|Required|It is site menus config.|
+## 致谢
 
-How to use? See Docs.
+博客主题文章的文字颜色及部分排版受凯哥 [HenCoder] 网站的启发，打赏样式受 [写代码的猴子的博客][Jaeger] 的启发，特此感谢。
 
-## Contributing
+文章图片查看大图由 [zooming](https://github.com/kingdido999/zooming) 提供支持，特此感谢。
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/KeJunMao/jekyll-theme-mdui. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+## Todo
 
-## Development
+- [ ] Multilingual support (多语言支持)
+- [ ] Toc (文章索引目录)
+- [ ] Math support with LaTeX (数学公式支持)
 
-To set up your environment to develop this theme, run `bundle install`.
+## Change log
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+查看 [版本更新日志][Change Log]
 
-When your theme is released, only the files in `_layouts`, `_includes`, and `assets` tracked with Git will be released.
+## 打赏
+
+如果主题对你有帮助，并帮你节省了一些折腾的时间，可以考虑打赏，这是对我所做工作的最大肯定。
+
+![reward.png](./docs/reward.webp)
 
 ## License
 
-[![license](https://img.shields.io/github/license/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://github.com/KeJunMao/jekyll-theme-mdui/blob/master/LICENSE.txt)
-
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+[blog]: https://showzeng.itscoder.com
+[demo]: https://showzeng.github.io
+[license]: https://creativecommons.org/licenses/by-nc-nd/4.0/
+[wiki]: https://github.com/showzeng/Minimalism/wiki
+[issue]: https://github.com/showzeng/Minimalism/issues/new
+[Change Log]: https://github.com/showzeng/Minimalism/wiki/Change-Log
+[HenCoder]: https://hencoder.com/
+[Jaeger]: https://jaeger.itscoder.com/

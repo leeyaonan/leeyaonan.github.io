@@ -1,7 +1,5 @@
-# source "https://rubygems.org"
-source 'https://gems.ruby-china.com'
+# frozen_string_literal: true
 
-gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
-gem 'jekyll-feed'
+source "https://rubygems.org"
+
 gemspec
